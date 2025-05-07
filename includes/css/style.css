@@ -164,20 +164,19 @@ body {
 .contact-banner {
   display: inline-flex;
   align-items: center;
-  gap: 1rem;
   background: var(--primary-color);
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   margin: 1rem 0;
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .contact-banner:hover {
-  cursor: default;
+  cursor: pointer;
   background: var(--primary-hover);
   transform: scale(1.02);
 }
