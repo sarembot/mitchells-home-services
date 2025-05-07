@@ -137,7 +137,7 @@
           <div class="row">
             <!-- Hero Image -->
             <div
-              class="d-flex flex-column justify-content-center align-items-center col-12 col-lg-6"
+              class="d-flex flex-column justify-content-center align-items-center col-12 col-lg-6 mb-3"
             >
               <div class="hero-img-container m-md-3">
                 <img
@@ -165,17 +165,16 @@
             >
               <div class="text-center mb-4 mx-1">
                 <p
+                  class="hero-p text-dark m-0 text-center text-wrap-balance fs-3 m-0 fw-bold fst-italic roboto"
+                >
+                  PROFESSIONAL WINDOW & GUTTER CLEANING
+                </p>
+                <br />
+                <p
                   class="hero-p text-dark m-0 text-center text-wrap-balance fs-4 m-0"
                 >
                   Proudly serving East Sooke, Metchosin, Sooke, and Langford
                   with reliable, friendly service.
-                </p>
-                <br />
-                <p
-                  class="hero-p text-dark m-0 text-center text-wrap-balance fs-3 m-0 fw-bold fst-italic roboto"
-                >
-                  Professional window cleaning, gutter cleaning, and yard
-                  maintenance.
                 </p>
               </div>
 
@@ -195,11 +194,12 @@
       </section>
 
       <!-- Services -->
-      <section id="services" class="services py-4">
+      <section id="services" class="services pt-5">
         <div class="container mt-5">
           <div class="row text-center mb-2">
             <div class="col-lg-8 mx-auto">
-              <h2 class="display-5 fw-bold mb-3">Services</h2>
+              <h2 class="fs-1 fw-bold mb-3">Services</h2>
+              <hr class="mx-3" />
               <p class="lead text-muted text-wrap-balance">
                 Reliable solutions to help keep your home looking and
                 functioning its best.
@@ -217,10 +217,8 @@
                     alt="Window cleaning"
                   />
                 </div>
-                <!-- <div class="service-icon mb-4">
-                  <i class="bi bi-window fs-1"></i>
-                </div> -->
-                <h3 class="h4 mb-3">Window Cleaning</h3>
+
+                <h3 class="h3 mb-3">Window Cleaning</h3>
                 <p class="text-muted mb-4">
                   Brighten your home with sparkling, streak-free windows. I use
                   traditional window cleaning methods with a keen attention to
@@ -253,10 +251,8 @@
                     alt="Gutter cleaning"
                   />
                 </div>
-                <!-- <div class="service-icon mb-4">
-                  <i class="bi bi-water fs-1"></i>
-                </div> -->
-                <h3 class="h4 mb-3">Gutter Cleaning</h3>
+
+                <h3 class="h3 mb-3">Gutter Cleaning</h3>
                 <p class="text-muted mb-4">
                   Don't feel safe getting up on your roof? Leave it to me! I use
                   all of the necessary safety precautions to ensure that your
@@ -290,10 +286,7 @@
                     alt="Dog on lawn"
                   />
                 </div>
-                <!-- <div class="service-icon mb-4">
-                  <i class="bi bi-house-fill fs-1"></i>
-                </div> -->
-                <h3 class="h4 mb-3">Pet Waste Removal</h3>
+                <h3 class="h3 mb-3">Pet Waste Removal</h3>
                 <p class="text-muted mb-4">
                   Enjoy a clean, healthy yard without the hassle. I provide
                   discreet, reliable pet waste removal services so you can spend
@@ -320,14 +313,17 @@
         </div>
       </section>
 
-      <!-- About Section -->
-      <section id="about" class="about py-5 bg-secondary">
+      <!-- ABOUT -->
+      <section id="about" class="about pt-5 min-vh-100">
         <div class="container mt-5">
-          <div class="row align-items-center">
+          <div
+            class="row align-items-center col-lg-10 mx-auto border-primary rounded p-3 shadow-lg bg-secondary"
+          >
             <div class="container">
               <h2 class="display-5 fw-bold mb-4 text-center">About Me</h2>
+              <hr class="mx-3" />
               <div class="row">
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6 px-lg-3">
                   <p class="lead mb-4">
                     Hi, I’m Mitchell — the owner and operator of Mitchell’s Home
                     Services. I started this business with a simple goal: to
@@ -348,11 +344,18 @@
                   </p>
                 </div>
                 <div
-                  class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center"
+                  class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center px-lg-3"
                 >
-                  <div class="mb-4 mx-3">
-                    <h3 class="h5 fw-bold mb-3">Why Work With Me?</h3>
-                    <div class="row">
+                  <div class="img-container p-3">
+                    <img
+                      src="/images/about-img.jpeg"
+                      alt="#"
+                      class="img-thumbnail rounded-circle p-2 bg-primary-opacity"
+                    />
+                  </div>
+                  <div class="mb-4 mx-3 w-100">
+                    <h3 class="fw-bold mb-3 text-center">Why Work With Me?</h3>
+                    <div class="row mx-lg-4">
                       <div class="mb-3">
                         <div class="d-flex align-items-center">
                           <i class="bi bi-house text-primary fs-4 me-2"></i>
@@ -381,14 +384,14 @@
                       </div>
                     </div>
                   </div>
-                  <div
-                    class="container d-flex justify-content-center align-items-center"
-                  >
-                    <a href="#contact" class="btn btn-primary btn-lg"
-                      >Get in Touch</a
-                    >
-                  </div>
                 </div>
+              </div>
+              <div
+                class="container d-flex justify-content-center align-items-center"
+              >
+                <a href="#contact" class="btn btn-primary btn-lg"
+                  >Get in Touch</a
+                >
               </div>
             </div>
           </div>
@@ -398,9 +401,14 @@
       <!-- CONTACT -->
       <section id="contact" class="contact py-5 min-vh-100">
         <div class="container mt-5">
-          <div class="row">
-            <h2 class="display-5 fw-bold mb-4 text-center">Get in Touch</h2>
-            <div class="">
+          <div
+            class="row col-lg-10 mx-auto border-primary bg-secondary rounded shadow-lg p-3"
+          >
+            <div class="col-lg-8 mx-auto">
+              <h2 class="display-5 fw-bold mb-4 text-center">Contact Me</h2>
+              <hr class="mx-3" />
+            </div>
+            <div class="p-0">
               <p class="lead mb-4 text-center text-wrap-balance">
                 Call or Text the number below, or send me an email to get your
                 free quote today!
@@ -410,13 +418,13 @@
                 service you're requesting, and the size/scope of the job.
               </p>
               <hr class="mx-2" />
-              <div class="mb-4">
+              <div class="mb-4 col-lg-6 mx-auto">
                 <ul class="list-unstyled">
-                  <li class="mb-2 fs-5">
+                  <li class="mb-2 fs-6">
                     <i class="bi bi-telephone text-primary me-2"></i>(250)
                     927-5961
                   </li>
-                  <li class="mb-2 fs-5">
+                  <li class="mb-2 fs-6">
                     <i class="bi bi-envelope text-primary me-2"></i
                     >info@mitchellshomeservices.ca
                   </li>
