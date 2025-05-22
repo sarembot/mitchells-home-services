@@ -107,3 +107,14 @@ const contact = {
 };
 
 const contactForm = document.getElementById("contactForm");
+
+// Close offcanvas after link clicked
+const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+const navSidebar = document.getElementById("navSidebar");
+const offcanvas = new bootstrap.Offcanvas(navSidebar);
+
+mobileLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    offcanvas.hide();
+  });
+});
