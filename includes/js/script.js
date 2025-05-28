@@ -118,3 +118,14 @@ mobileLinks.forEach((link) => {
     offcanvas.hide();
   });
 });
+
+// Initialize Masonry with imagesLoaded
+const grid = document.querySelector(".row[data-masonry]");
+if (grid) {
+  const msnry = new Masonry(grid, {
+    percentPosition: true,
+  });
+  imagesLoaded(grid).on("progress", () => {
+    msnry.layout();
+  });
+}

@@ -3,7 +3,7 @@
   --primary-color: rgb(13, 77, 97);
   --primary-hover: #0a3a4a;
   --secondary-color: #ddd;
-  --accent-color: rgb(13, 77, 97, 0.4);
+  --accent-color: rgba(13, 77, 97, 0.4);
   --accent-hover: #1976d2;
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -16,21 +16,16 @@
   box-sizing: border-box;
 }
 
-html,
 body {
-  height: 100%;
   margin: 0;
-  padding: 0;
+  padding-top: 76px; /* Keep this to account for fixed navbar */
+  min-height: 100vh;
   font-family: "Roboto Condensed", sans-serif;
-}
-
-body {
-  padding-top: 76px;
   overflow-x: hidden;
+  position: relative;
 }
 
-.lead,
-.roboto {
+.lead {
   font-family: "Roboto", serif;
 }
 
@@ -65,6 +60,10 @@ body {
 
 /* Navbar */
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: var(--secondary-color);
   box-shadow: var(--shadow-sm);
   z-index: 1060;
@@ -150,9 +149,9 @@ body {
 
 /* Hero Section */
 .hero {
-  position: relative;
-  min-height: 100vh;
-  background: url("/images/hero-bg.jpg") center/cover fixed;
+  min-height: calc(100vh - 76px);
+  /* background: linear-gradient(rgba(13, 77, 97, 0.9), rgba(13, 77, 97, 0.9)), */
+  /* url("../../images/hero-bg.jpg") center/cover; */
 }
 
 .hero-content {
@@ -166,27 +165,23 @@ body {
 }
 
 .hero-img {
+  max-width: 100%;
   height: auto;
+  width: 100%;
 }
 
 .contact-banner {
-  display: inline-flex;
-  align-items: center;
-  background: var(--primary-color);
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  margin: 1rem 0;
+  display: block;
   text-decoration: none;
-  font-size: 0.8rem;
-  font-weight: 500;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 0.375rem;
   transition: all 0.3s ease;
 }
 
 .contact-banner:hover {
-  cursor: pointer;
-  background: var(--primary-hover);
-  transform: scale(1.02);
+  background-color: var(--primary-color);
+  color: white;
 }
 
 .contact-banner i {
@@ -205,7 +200,7 @@ body {
 /* Buttons */
 .btn-primary,
 .btn-outline-light {
-  padding: 0.8rem 2rem;
+  padding: 12px 24px;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -252,10 +247,9 @@ body {
 }
 
 .service-card {
-  background-color: white;
-  border-radius: 8px;
+  border: none;
   box-shadow: var(--shadow-sm);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .service-card:hover {
@@ -263,15 +257,27 @@ body {
   box-shadow: var(--shadow-md);
 }
 
-.service-icon {
-  color: var(--accent-color);
+.service-card .card-img-top {
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.service-icon i {
-  opacity: 0.9;
+/* Adjust section spacing */
+section {
+  position: relative;
+  overflow: hidden;
 }
 
-.about-img {
-  width: 275px;
-  max-width: 375px;
+/* Remove any extra margin/padding from main */
+main {
+  overflow: hidden;
+}
+
+/* Add responsive container padding */
+@media (max-width: 576px) {
+  .hero .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }

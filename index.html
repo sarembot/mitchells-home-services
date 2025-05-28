@@ -167,15 +167,15 @@
 
           <div class="w-100">
             <hr class="border-light opacity-25 my-3 mx-2" />
-            <ul class="list-unstyled offcanvas-contact-list">
-              <li class="mb-2">
+            <ul class="offcanvas-contact-list list-unstyled">
+              <li>
                 <i class="bi bi-geo-alt text-light me-2"></i>East Sooke, BC
               </li>
-              <li class="mb-2">
+              <li>
                 <i class="bi bi-envelope text-light me-2"></i
                 >info@mitchellshomeservices.ca
               </li>
-              <li class="mb-2">
+              <li>
                 <i class="bi bi-telephone text-light me-2"></i>(250) 927-5961
               </li>
             </ul>
@@ -209,60 +209,50 @@
 
     <!-- HERO -->
     <main>
-      <section class="hero min-vh-100">
-        <div class="container pt-2 pt-lg-5">
-          <div class="row">
-            <!-- Hero Image -->
-            <div
-              class="d-flex flex-column justify-content-center align-items-center col-12 col-xl-6 mb-3"
-            >
-              <div class="hero-img-container m-md-3">
+      <section class="hero d-flex align-items-center p-2">
+        <div class="container">
+          <div class="row align-items-center">
+            <!-- Left Column: Logo and Phone -->
+            <div class="col-lg-6 text-center mb-3 mb-lg-0">
+              <div class="mb-4">
                 <img
                   src="images/logo.png"
-                  class="img-fluid hero-img mx-auto"
+                  class="img-fluid hero-img"
                   alt="Mitchell's Home Services"
+                  style="max-width: min(100%, 450px)"
                 />
               </div>
-
-              <div
-                class="contact-banner-container d-flex justify-content-center"
+              <a
+                href="tel:+12509275961"
+                class="btn btn-primary btn-lg d-inline-flex align-items-center"
               >
-                <a
-                  href="tel:+12509275961"
-                  class="contact-banner mx-auto mb-2 mt-2"
-                >
-                  <i class="fas fa-phone"></i>
-                  <span class="phone-number fs-4 ms-2">+1 (250) 927-5961</span>
-                </a>
-              </div>
+                <i class="fas fa-phone me-2"></i>
+                <span>(250) 927-5961</span>
+              </a>
             </div>
 
-            <div
-              class="d-flex flex-column col-12 col-xl-6 align-items-center justify-content-center justify-content-lg-end"
-            >
-              <div class="text-center mb-4 mx-1">
-                <p
-                  class="hero-p text-dark m-0 text-center text-wrap-balance fs-3 m-0 fw-bold fst-italic roboto"
-                >
-                  PROFESSIONAL WINDOW & GUTTER CLEANING
+            <!-- Right Column: Services and CTA -->
+            <div class="col-lg-6">
+              <div class="bg-white rounded shadow-sm px-2 py-3 mb-4">
+                <p class="fs-4 fw-bold text-primary text-center mb-2">
+                  Professional Home Services
                 </p>
-                <br />
-                <p
-                  class="hero-p text-dark m-0 text-center text-wrap-balance fs-4 m-0"
-                >
-                  Proudly serving East Sooke, Metchosin, Sooke, and Langford
-                  with reliable, friendly service.
+                <p class="fs-5 text-dark mb-0 text-normal text-center">
+                  Roof Cleaning • Gutter Cleaning • Window Cleaning
                 </p>
               </div>
 
-              <div class="cta-buttons d-flex flex-column w-100 mx-auto mb-4">
-                <a href="#contact" class="btn btn-primary btn-lg mx-lg-5 my-1"
+              <p class="fs-5 mb-4 text-center text-muted text-wrap-balance">
+                Proudly serving East Sooke, Metchosin, Sooke, and Langford with
+                reliable, friendly service.
+              </p>
+
+              <div class="d-grid gap-3">
+                <a href="#contact" class="btn btn-primary btn-lg"
                   >Get a Free Quote</a
                 >
-                <a
-                  href="#services"
-                  class="btn btn-outline-light btn-lg text-dark mx-lg-5 my-1 btn-secondary"
-                  >See Services</a
+                <a href="#services" class="btn btn-outline-secondary btn-lg"
+                  >View My Services</a
                 >
               </div>
             </div>
@@ -271,73 +261,62 @@
       </section>
 
       <!-- SERVICES -->
-      <section
-        id="services"
-        class="services pt-5 pt-lg-4 min-vh-100 d-flex justify-content-center align-items-center"
-      >
-        <div class="container mt-5">
-          <div class="mx-auto border-accent rounded p-3 shadow-lg bg-secondary">
-            <div class="row text-center mb-2">
-              <div class="col-lg-8 mx-auto">
-                <h2 class="fs-1 fw-bold mb-3">Services</h2>
-                <hr class="mx-3" />
-                <p class="lead text-muted text-wrap-balance">
-                  Reliable solutions to help keep your home looking and
-                  functioning its best.
-                </p>
-              </div>
-            </div>
+      <section id="services" class="services py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3 mt-5">Services</h2>
+            <p
+              class="lead text-muted text-wrap-balance mx-auto"
+              style="max-width: 700px"
+            >
+              Reliable solutions to help keep your home looking and functioning
+              its best.
+            </p>
+          </div>
 
-            <div class="row g-4" data-masonry='{"percentPosition": true }'>
-              <div class="col-lg-6 col-xl-4">
-                <div
-                  class="service-card h-100 p-4 text-center shadow-lg bg-secondary"
-                >
-                  <div class="service-img mb-3">
-                    <img
-                      src="./images/window-cleaning.jpg"
-                      class="img img-fluid rounded"
-                      alt="Window cleaning"
-                    />
-                  </div>
-
-                  <h3 class="h3 mb-3">Window Cleaning</h3>
+          <div class="row g-4" data-masonry='{"percentPosition": true }'>
+            <div class="col-lg-6 col-xl-4">
+              <div class="service-card bg-white rounded">
+                <img
+                  src="./images/window-cleaning.jpg"
+                  class="card-img-top rounded"
+                  alt="Window cleaning"
+                />
+                <div class="card-body p-4">
+                  <h3 class="h4 mb-3">Window Cleaning</h3>
                   <p class="text-muted mb-4">
                     Brighten your home with sparkling, streak-free windows. I
                     use traditional window cleaning methods with a keen
                     attention to detail to leave your windows spotless and allow
                     the sunshine to shine into your home.
                   </p>
-                  <ul class="list-unstyled text-start mb-4">
-                    <li class="mb-2 fw-normal">
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-2">
                       <i class="bi bi-check2-circle text-primary me-2"></i>
                       Interior & exterior cleaning
                     </li>
-                    <li class="mb-2 fw-normal">
+                    <li class="mb-2">
                       <i class="bi bi-check2-circle text-primary me-2"></i>
                       Screen cleaning
                     </li>
-                    <li class="mb-2">
+                    <li>
                       <i class="bi bi-check2-circle text-primary me-2"></i>
                       Track & sill cleaning
                     </li>
                   </ul>
                 </div>
               </div>
+            </div>
 
-              <div class="col-lg-6 col-xl-4">
-                <div
-                  class="service-card h-100 p-4 text-center shadow-lg bg-secondary"
-                >
-                  <div class="service-img mb-3">
-                    <img
-                      src="./images/gutter-cleaning.jpg"
-                      class="img img-fluid rounded"
-                      alt="Gutter cleaning"
-                    />
-                  </div>
-
-                  <h3 class="h3 mb-3">Gutter Cleaning</h3>
+            <div class="col-lg-6 col-xl-4">
+              <div class="service-card bg-white rounded">
+                <img
+                  src="./images/gutter-cleaning.jpg"
+                  class="card-img-top rounded"
+                  alt="Gutter cleaning"
+                />
+                <div class="card-body p-4">
+                  <h3 class="h4 mb-3">Gutter Cleaning</h3>
                   <p class="text-muted mb-4">
                     Don't feel safe getting up on your roof? Leave it to me! I
                     use all of the necessary safety precautions to ensure that
@@ -345,7 +324,7 @@
                     downspouts are flowing as they should be - preventing
                     potential damage to your homes foundation, siding, and roof.
                   </p>
-                  <ul class="list-unstyled text-start mb-4">
+                  <ul class="list-unstyled mb-0">
                     <li class="mb-2">
                       <i class="bi bi-check2-circle text-primary me-2"></i>
                       Debris removal
@@ -354,27 +333,24 @@
                       <i class="bi bi-check2-circle text-primary me-2"></i>
                       Downspout cleaning
                     </li>
-                    <li class="mb-2">
+                    <li>
                       <i class="bi bi-check2-circle text-primary me-2"></i>
                       Flow testing
                     </li>
                   </ul>
                 </div>
               </div>
+            </div>
 
-              <div class="col-lg-6 col-xl-4">
-                <div
-                  class="service-card h-100 p-4 text-center shadow-lg bg-secondary"
-                >
-                  <div class="service-img mb-3">
-                    <img
-                      src="./images/gutter-cleaning.jpg"
-                      class="img img-fluid rounded"
-                      alt="Gutter cleaning"
-                    />
-                  </div>
-
-                  <h3 class="h3 mb-3">Moss Removal</h3>
+            <div class="col-lg-6 col-xl-4">
+              <div class="service-card bg-white rounded">
+                <img
+                  src="./images/moss-removal.jpg"
+                  class="card-img-top rounded"
+                  alt="Moss removal"
+                />
+                <div class="card-body p-4">
+                  <h3 class="h4 mb-3">Moss Removal</h3>
                   <p class="text-muted mb-4">
                     Rooftop moss can shorten the life of your shingles and leave
                     your home vulnerable to moisture damage. I take care of the
@@ -388,7 +364,7 @@
                     environment—no harsh chemicals, just a clean, protected roof
                     ready to face the elements.
                   </p>
-                  <ul class="list-unstyled text-start mb-4">
+                  <ul class="list-unstyled mb-0">
                     <li class="mb-2">
                       <i class="bi bi-check2-circle text-primary me-2"></i>
                       Debris Removal
@@ -397,32 +373,31 @@
                       <i class="bi bi-check2-circle text-primary me-2"></i>
                       Bulk Moss Removal
                     </li>
-                    <li class="mb-2">
+                    <li>
                       <i class="bi bi-check2-circle text-primary me-2"></i>
-                      Final Treatment
+                      Final Soft Wash Treatment
                     </li>
                   </ul>
                 </div>
               </div>
-              <div class="col-lg-6 col-xl-4">
-                <div
-                  class="service-card h-100 p-4 text-center shadow-lg bg-secondary"
-                >
-                  <div class="service-img mb-3">
-                    <img
-                      src="https://images.unsplash.com/photo-1555983312-96595d3737eb?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                      class="img img-fluid rounded"
-                      alt="Dog on lawn"
-                    />
-                  </div>
-                  <h3 class="h3 mb-3">Pet Waste Removal</h3>
+            </div>
+
+            <div class="col-lg-6 col-xl-4">
+              <div class="service-card bg-white rounded">
+                <img
+                  src="https://images.unsplash.com/photo-1555983312-96595d3737eb?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="card-img-top rounded"
+                  alt="Dog on lawn"
+                />
+                <div class="card-body p-4">
+                  <h3 class="h4 mb-3">Pet Waste Removal</h3>
                   <p class="text-muted mb-4">
                     Enjoy a clean, healthy yard without the hassle. I provide
                     discreet, reliable pet waste removal services so you can
                     spend more time enjoying your outdoor space — and less time
                     cleaning it.
                   </p>
-                  <ul class="list-unstyled text-start mb-4">
+                  <ul class="list-unstyled mb-0">
                     <li class="mb-2">
                       <i class="bi bi-check2-circle text-primary me-2"></i>
                       One Time Cleanups
@@ -431,7 +406,7 @@
                       <i class="bi bi-check2-circle text-primary me-2"></i>
                       Weekly / Bi-weekly Cleanups
                     </li>
-                    <li class="mb-2">
+                    <li>
                       <i class="bi bi-check2-circle text-primary me-2"></i>
                       Lawn Deodorization
                     </li>
@@ -444,191 +419,209 @@
       </section>
 
       <!-- ABOUT -->
-      <section
-        id="about"
-        class="about pt-5 pt-lg-4 min-vh-100 d-flex justify-content-center align-items-center"
-      >
-        <div class="container mt-5">
-          <div
-            class="row align-items-center col-xl-10 mx-auto border-accent rounded p-3 shadow-lg bg-secondary"
-          >
-            <div>
-              <h2 class="display-5 fw-bold mb-4 text-center">About Me</h2>
-              <hr class="mx-3" />
-              <div class="row">
-                <div class="d-flex flex-column flex-lg-row-reverse">
-                  <div
-                    class="img-container d-flex justify-content-center align-items-start p-3 col-12 col-lg-6 px-lg-3"
-                  >
-                    <img
-                      src="/images/about-img.jpeg"
-                      alt="#"
-                      class="about-img img-fluid img-thumbnail rounded-circle p-2 bg-primary-opacity"
-                    />
-                  </div>
-                  <div class="col-12 col-lg-6 px-lg-3 mb-4">
-                    <p class="lead mb-4">
-                      Hi, I’m Mitchell — the owner and operator of Mitchell’s
-                      Home Services. I started this business with a simple goal:
-                      to provide my neighbours with friendly service that they
-                      can rely on.
-                    </p>
-                    <p class="lead mb-4">
-                      Based in East Sooke and proudly serving the South Island,
-                      I believe in showing up on time, and doing the job right.
-                      Whether it's cleaning your gutters, making your windows
-                      shine, or helping you maintain a cleaner yard, you can
-                      count on me to deliver quality work with a smile.
-                    </p>
-                    <p class="lead mb-4">
-                      I'm here to help you keep your home looking its best and
-                      running smoothly. Let's work together to make your home a
-                      sanctuary of cleanliness and comfort.
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="col-12 d-flex flex-column flex-lg-row justify-content-end align-items-end px-lg-3"
-                >
-                  <div
-                    class="lg-mr-auto col-lg-6 mb-4 mx-auto border-primary p-3 rounded"
-                  >
-                    <h3 class="fw-bold mb-3 text-center">Why Work With Me?</h3>
-                    <div class="row mx-lg-4">
-                      <div class="mb-3">
-                        <div class="d-flex align-items-center">
-                          <i class="bi bi-house text-primary fs-4 me-2"></i>
-                          <span>Locally Operated</span>
-                        </div>
+      <section id="about" class="bg-white py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3 mt-5">About Me</h2>
+          </div>
+
+          <div class="row align-items-start justify-content-between">
+            <!-- Left Column Wrapper -->
+            <div class="col-12 col-lg-5 d-flex flex-column">
+              <!-- Image -->
+              <div class="text-center mb-5">
+                <img
+                  src="/images/about-img.jpeg"
+                  alt="Mitchell Saremba"
+                  class="img-fluid rounded-circle shadow-sm"
+                  style="max-width: 300px"
+                />
+              </div>
+
+              <!-- Features Box -->
+              <div class="mb-5 d-none d-lg-block">
+                <div class="bg-light rounded shadow-sm p-4">
+                  <h3 class="h4 mb-4 text-center">Why Work With Me?</h3>
+                  <div class="row g-4">
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-house text-primary fs-4 me-3"></i>
+                        <span>Locally Operated</span>
                       </div>
-                      <div class="mb-3">
-                        <div class="d-flex align-items-center">
-                          <i class="bi bi-heart text-primary fs-4 me-2"></i>
-                          <span>Friendly Service</span>
-                        </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-heart text-primary fs-4 me-3"></i>
+                        <span>Friendly Service</span>
                       </div>
-                      <div class="mb-3">
-                        <div class="d-flex align-items-center">
-                          <i
-                            class="bi bi-shield-check text-primary fs-4 me-2"
-                          ></i>
-                          <span>Fully Insured</span>
-                        </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i
+                          class="bi bi-shield-check text-primary fs-4 me-3"
+                        ></i>
+                        <span>Fully Insured</span>
                       </div>
-                      <div class="mb-3">
-                        <div class="d-flex align-items-center">
-                          <i class="bi bi-clock text-primary fs-4 me-2"></i>
-                          <span>Prompt & Reliable</span>
-                        </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-clock text-primary fs-4 me-3"></i>
+                        <span>Prompt & Reliable</span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div
-                class="container d-flex justify-content-center align-items-center"
-              >
+
+              <!-- Button -->
+              <div class="text-center mb-4 d-none d-lg-block">
                 <a href="#contact" class="btn btn-primary btn-lg"
                   >Get in Touch</a
                 >
               </div>
+            </div>
+
+            <!-- Right Column - Text -->
+            <div class="col-12 col-lg-6">
+              <div class="bg-light rounded shadow-sm p-4 mb-4">
+                <p class="lead mb-4">
+                  Hi, I'm Mitchell — the owner and operator of Mitchell's Home
+                  Services. I started this business with a simple goal: to
+                  provide my neighbours with friendly service that they can rely
+                  on.
+                </p>
+                <p class="lead mb-4">
+                  Based in East Sooke and proudly serving the South Island, I
+                  believe in showing up on time, and doing the job right.
+                  Whether it's cleaning your gutters, making your windows shine,
+                  or helping you maintain a cleaner yard, you can count on me to
+                  deliver quality work with a smile.
+                </p>
+                <p class="lead mb-0">
+                  I'm here to help you keep your home looking its best and
+                  running smoothly. Let's work together to make your home a
+                  sanctuary of cleanliness and comfort.
+                </p>
+              </div>
+            </div>
+
+            <!-- Mobile-only Features Box -->
+            <div class="col-12 d-lg-none mb-5">
+              <div class="bg-light rounded shadow-sm p-4">
+                <h3 class="h4 mb-4 text-center">Why Work With Me?</h3>
+                <div class="row g-4">
+                  <div class="col-6">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-house text-primary fs-4 me-3"></i>
+                      <span>Locally Operated</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-heart text-primary fs-4 me-3"></i>
+                      <span>Friendly Service</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-shield-check text-primary fs-4 me-3"></i>
+                      <span>Fully Insured</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-clock text-primary fs-4 me-3"></i>
+                      <span>Prompt & Reliable</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mobile-only Button -->
+            <div class="col-12 d-lg-none text-center mb-4">
+              <a href="#contact" class="btn btn-primary btn-lg">Get in Touch</a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- CONTACT -->
-      <section id="contact" class="contact pt-5 pt-lg-4 min-vh-100">
-        <div class="container mt-5">
-          <div
-            class="row col-xl-10 mx-auto border-primary bg-secondary rounded shadow-lg p-3"
-          >
-            <div class="col-lg-8 mx-auto">
-              <h2 class="display-5 fw-bold mb-4 text-center">Contact Me</h2>
-              <hr class="mx-3" />
-            </div>
-            <div class="p-0">
-              <p class="lead mb-4 text-center text-wrap-balance">
-                Call or Text the number below, or send me an email to get your
-                free quote today!
-              </p>
-              <p class="lead mb-4 text-wrap-balance text-center mb-4">
-                Please include information such as your name, address, the
-                service you're requesting, and the size/scope of the job.
-              </p>
-              <hr class="mx-2" />
-              <div class="mb-4 col-lg-6 mx-auto">
-                <div
-                  class="contact-banner-container d-flex justify-content-center"
-                >
-                  <ul class="list-unstyled">
-                    <li>
-                      <a
-                        href="tel:+12509275961"
-                        class="contact-banner w-100 mx-auto mb-2 mt-2 p-2 fs-5"
-                      >
-                        <i class="fas fa-phone"></i>
-                        <span class="phone-number ms-2">+1 (250) 927-5961</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="mailto:info@mitchellshomeservices.ca"
-                        class="contact-banner mx-auto mb-2 mt-2 p-2 fs-5"
-                      >
-                        <i class="fas fa-envelope"></i>
-                        <span class="email ms-2">
-                          info@mitchellshomeservices.ca</span
-                        >
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- <hr class="mx-2" />
+      <section id="contact" class="bg-white py-5">
+        <div class="container d-flex flex-column align-items-center">
+          <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3 mt-5">Contact Me</h2>
+            <p
+              class="lead text-muted text-wrap-balance mx-auto"
+              style="max-width: 700px"
+            >
+              Call, text, or email for your free quote today! Please include
+              your name, address, service needed, and scope of work.
+            </p>
+          </div>
 
-            <div class="d-flex justify-content-center">
-              <div class="btn-primary rounded text-light text-center">
-                <span class="fs-4">Thank you for visiting!</span>
+          <div
+            class="bg-light rounded shadow-sm d-flex justify-content-center align-items-center"
+          >
+            <div class="w-100 row g-4 p-0 p-lg-4">
+              <!-- Phone -->
+              <div class="p-1 p-md-2">
+                <a
+                  href="tel:+12509275961"
+                  class="d-flex align-items-center bg-white rounded shadow-sm p-3 text-decoration-none text-dark h-100"
+                >
+                  <i class="fas fa-phone fs-3 text-primary me-3"></i>
+                  <div>
+                    <h3 class="h5 mb-1">Phone or Text</h3>
+                    <span class="text-muted">(250) 927-5961</span>
+                  </div>
+                </a>
               </div>
-            </div> -->
+
+              <!-- Email -->
+              <div class="p-1 p-md-2">
+                <a
+                  href="mailto:info@mitchellshomeservices.ca"
+                  class="d-flex align-items-center bg-white rounded shadow-sm p-3 text-decoration-none text-dark h-100"
+                >
+                  <i class="fas fa-envelope fs-3 text-primary me-3"></i>
+                  <div>
+                    <h3 class="h5 mb-1">Email</h3>
+                    <span class="text-muted"
+                      >info@mitchellshomeservices.ca</span
+                    >
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-
-      <!-- FOOTER -->
-      <footer>
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-md-6 d-flex justify-content-center">
-              <div class="social-links mb-0">
-                <a
-                  href="https://www.facebook.com/profile.php?id=61576108018866"
-                  class="text-dark me-3"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a
-                  href="https://www.linkedin.com/in/mitchellsaremba/"
-                  class="text-dark me-3"
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
-                <a href="mailto:info@mitchellshomeservices.ca" class="text-dark"
-                  ><i class="fas fa-envelope"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <p class="mb-0">
-                &copy; 2025 Mitchell Saremba. All rights reserved.
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
     </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white py-4">
+      <div class="container">
+        <div class="social-links text-center mb-3">
+          <a
+            href="https://www.facebook.com/profile.php?id=61576108018866"
+            class="text-dark me-3"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/mitchellsaremba/"
+            class="text-dark me-3"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="mailto:info@mitchellshomeservices.ca" class="text-dark"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+        <div class="text-center">
+          <p class="mb-0">&copy; 2025 Mitchell Saremba. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -641,6 +634,8 @@
     />
     <!-- Bootstrap Masonry -->
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+    <!-- ImagesLoaded -->
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 
     <!-- Custom Scripts -->
     <script>
